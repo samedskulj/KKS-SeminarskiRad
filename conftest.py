@@ -24,7 +24,7 @@ def signin_func():
     global wait
     driver.get(LINKEDIN)
     driver.maximize_window()
-    #Provjera ako je korisnik već ulogovan da nema potrebe za tim procesom opet - Selenium User Agent problem - quick fix također
+    #Provjera ako je korisnik već ulogovan da nema potrebe za tim procesom opet - Selenium User Agent problem sa Linkedin-om - quick fix
     if driver.current_url != "https://www.linkedin.com/feed/":
         input_email = wait.until(EC.element_to_be_clickable((By.ID, "session_key")))
         input_password = wait.until(EC.element_to_be_clickable((By.ID, "session_password")))
